@@ -3,7 +3,12 @@ const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
   forWho: String,
-  items: [{type: Schema.Types.ObjectId, ref: "Item"}],
+  items: [{
+  	_id: String,
+  	name: String,
+  	price: Number,
+  	quantity: Number
+  }],
   date: { type: Date, default: Date.now }
 });
 
