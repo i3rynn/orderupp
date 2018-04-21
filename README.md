@@ -20,3 +20,5 @@ yarn start
 
 <http://localhost:3000>
 
+<http://localhost:3001/api/menu>
+<http://localhost:3001/api/order>
