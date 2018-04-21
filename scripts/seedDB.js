@@ -192,19 +192,6 @@ const itemSeed = [
 }
 ];
 
-db.Item
-.remove({})
-.then(() => db.Item.collection.insertMany(itemSeed))
-.then(data => {
-  console.log(data.insertedIds.length + " records inserted!");
-  console.log(data + " data");
-  process.exit(0);
-})
-.catch(err => {
-  console.error(err);
-  process.exit(1);
-});
-
 
 const orderSeed = [
 {
@@ -214,32 +201,32 @@ const orderSeed = [
     "category": "Entrees",
     "name": "Artisan Pizza with Peppers and Sausage",
     "image": "Artisan_Pizza_with_Peppers_and_Sausage.jpg",
-    "price": "10.93"
+    "price": 10.93
   }, {
     "category": "Entrees",
     "name": "Fried Chicken Sandwich with Red Cabbage",
     "image": "Fried_Chicken_Sandwich_with_Red_Cabbage.jpg",
-    "price": "14.39"
+    "price": 14.39
   }, {
     "category": "Entrees",
     "name": "Pesto Pasta with Tomatoes",
     "image": "Pesto_Pasta_with_Tomatoes.jpg",
-    "price": "13.46"
+    "price": 13.46
   },{
     "category": "Drinks",
     "name": "Latte",
     "image": "Latte.jpg",
-    "price": "3.80"
+    "price": 3.80
   }, {
     "category": "Drinks",
     "name": "Latte",
     "image": "Latte.jpg",
-    "price": "3.80"
+    "price": 3.80
   }, {
     "category": "Drinks",
     "name": "Latte",
     "image": "Latte.jpg",
-    "price": "3.80"
+    "price": 3.80
   }]
 },
 {
@@ -249,12 +236,12 @@ const orderSeed = [
     "category": "Appetizers",
     "name": "Squash Soup",
     "image": "Squash_Soup.jpg",
-    "price": "6.42"
+    "price": 6.42
   }, {
     "category": "Appetizers",
     "name": "Steamed Dumplings",
     "image": "Steamed_Dumplings.jpg",
-    "price": "6.20"
+    "price": 6.20
   }]
 },
 {
@@ -264,17 +251,17 @@ const orderSeed = [
     "category": "Kids",
     "name": "Spaghetti with Red Sauce",
     "image": "Spaghetti_with_Red_Sauce.jpg",
-    "price": "9.28"
+    "price": 9.28
   }, {
     "category": "Specials",
     "name": "Alaskan King Crab Legs",
     "image": "Alaskan_King_Crab_Legs.jpg",
-    "price": "9.18"
+    "price": 9.18
   }, {
     "category": "Specials",
     "name": "Artisan Burger",
     "image": "Artisan_Burger.jpg",
-    "price": "11.77"
+    "price": 11.77
   }]
 },
 {
@@ -284,22 +271,22 @@ const orderSeed = [
     "category": "Drinks",
     "name": "Early Grey Tea",
     "image": "Early_Grey_Tea.jpg",
-    "price": "3.80"
+    "price": 3.80
   }, {
     "category": "Drinks",
     "name": "Latte",
     "image": "Latte.jpg",
-    "price": "3.80"
+    "price": 3.80
   },{
     "category": "Entrees",
     "name": "Salmon and Vegetables",
     "image": "Salmon_and_Vegetables.jpg",
-    "price": "9.82"
+    "price": 9.82
   }, {
     "category": "Entrees",
     "name": "Steak and Broccoli",
     "image": "Steak_and_Broccoli.jpg",
-    "price": "14.70"
+    "price": 14.70
   }]
 },
 {
@@ -309,7 +296,7 @@ const orderSeed = [
     "category": "Drinks",
     "name": "Blue Ice and Lime Cocktail",
     "image": "Blue_Ice_and_Lime_Cocktail.jpg",
-    "price": "3.27"
+    "price": 3.27
   }]
 },
 {
@@ -319,35 +306,49 @@ const orderSeed = [
     "category": "Appetizers",
     "name": "Street Tacos",
     "image": "Street_Tacos.jpg",
-    "price": "6.44"
+    "price": 6.44
   }, {
     "category": "Desserts",
     "name": "Cake Parfait",
     "image": "Cake_Parfait.jpg",
-    "price": "7.58"
+    "price": 7.58
   }, {
     "category": "Entrees",
     "name": "Fried Chicken Sandwich with Red Cabbage",
     "image": "Fried_Chicken_Sandwich_with_Red_Cabbage.jpg",
-    "price": "14.39"
+    "price": 14.39
   }, {
     "category": "Entrees",
     "name": "Pesto Pasta with Tomatoes",
     "image": "Pesto_Pasta_with_Tomatoes.jpg",
-    "price": "13.46"
+    "price": 13.46
   }]
 }
 ];
+
+
+db.Item
+.remove({})
+.then(() => db.Item.collection.insertMany(itemSeed))
+.then(data => {
+  console.log(data.insertedIds.length + " records inserted!");
+  console.log(data);
+  // process.exit(0);
+})
+.catch(err => {
+  console.error(err);
+  // process.exit(1);
+});
 
 db.Order
 .remove({})
 .then(() => db.Order.collection.insertMany(orderSeed))
 .then(data => {
   console.log(data.insertedIds.length + " records inserted!");
-  console.log(data + " data");
-  process.exit(0);
+  console.log(data);
+  // process.exit(0);
 })
 .catch(err => {
   console.error(err);
-  process.exit(1);
+  // process.exit(1);
 });
