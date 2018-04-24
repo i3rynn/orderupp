@@ -25,5 +25,5 @@ yarn start
 
 ## Heroku
 + https://restaurant-thing-project-thing.herokuapp.com/
-+ https://restaurant-thing-project-thing.herokuapp.com/
-+ https://restaurant-thing-project-thing.herokuapp.com/
++ https://restaurant-thing-project-thing.herokuapp.com/api/menu
++ https://restaurant-thing-project-thing.herokuapp.com/api/order
