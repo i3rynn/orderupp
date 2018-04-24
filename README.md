@@ -18,7 +18,12 @@ cd ..
 yarn start
 ```
 
-<http://localhost:3000>
+## Locally
++ <http://localhost:3000>
++ <http://localhost:3001/api/menu>
++ <http://localhost:3001/api/order>
 
-<http://localhost:3001/api/menu>
-<http://localhost:3001/api/order>
+## Heroku
++ https://restaurant-thing-project-thing.herokuapp.com/
++ https://restaurant-thing-project-thing.herokuapp.com/
++ https://restaurant-thing-project-thing.herokuapp.com/
