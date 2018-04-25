@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
+import * as Order from "./order";
+import * as Foodcontainer from "./foodcontainer";
+import * as Chooser from "./chooser";
+
 class Order extends Component {
   state = {
-    userpin: '',
+    userpin: "",
     menuoptions: {},
     orderitems: []
   };
@@ -26,8 +30,9 @@ class Order extends Component {
   render() {
     return (
     	<div>
-    	<div>Replace with category chooser component</div>
-    	<div>Replace with order area component</div>
+    	<Foodcontainer />
+    	<Order />
+    	<Chooser />
 
     	<div>Fill in with footer info (total calulation)</div>
     	</div>
