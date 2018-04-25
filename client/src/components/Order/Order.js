@@ -19,17 +19,18 @@ class Order extends Component {
     // get all menu items
     API.getMenu()
     .then(menuoptions => {
-    	this.setState({menuoptions})
+    	this.setState({menuoptions});
     });
-  }
-
-  handleBtnClick = event => {
-
   }
 
   render() {
     return (
-    	<div></div>
+    	<div>
+    	<div>Replace with category chooser component</div>
+    	<div>Replace with order area component</div>
+
+    	<div>Fill in with footer info (total calulation)</div>
+    	</div>
     );
   }
 }
