@@ -1,7 +1,7 @@
 import React from "react";
 import "./foodcontainer.css";
 
-const foodcontainer = props => (
+const Foodcontainer = props => (
 	<React.Fragment>
 	<img src="http://via.placeholder.com/285x285" alt="placeholder" className="img-thumbnail" />
 
@@ -15,4 +15,4 @@ const foodcontainer = props => (
 	</React.Fragment>
 );
 
-export default foodcontainer;
+export default Foodcontainer;
