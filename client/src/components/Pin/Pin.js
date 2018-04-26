@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import API from "../utils/API";
+import "./pin.css";
 
 class Pin extends Component {
   state = {
