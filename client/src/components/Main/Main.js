@@ -7,18 +7,18 @@ import * as Chooser from "./chooser";
 
 class Main extends Component {
   state = {
-    userpin: "",
+    enteredPin: "",
     menuoptions: {},
     orderitems: []
   };
 
   componentDidMount() {
   	// check for user session
-    const localList = localStorage.getItem('userpin');
-    if(!localList){
+    const enteredPin = localStorage.getItem('enteredPin');
+    if(!enteredPin){
     	return this.props.history.push('/');
     }
-    this.setState({userpin: localList});
+    this.setState({enteredPin});
 
     // get all menu items
     API.getMenu()
@@ -29,13 +29,14 @@ class Main extends Component {
 
   render() {
     return (
-    	<div>
-    	<Foodcontainer />
-    	<Order />
-    	<Chooser />
-
-    	<div>Fill in with footer info (total calulation)</div>
-    	</div>
+      <div>
+      {/* 
+      	<Foodcontainer />
+      	<Order />
+      	<Chooser />
+      */}
+      <div>Fill in with footer info (total calulation)</div>
+      </div>
     );
   }
 }
