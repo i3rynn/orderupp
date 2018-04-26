@@ -19,18 +19,18 @@ export default {
   },
   // Gets all menu items
   getMenu: function() {
-    return axios.get("/api/order");
+    return axios.get("/api/menu");
   },
   // Gets the menu item with the given id
   getMenu: function(id) {
-    return axios.get("/api/order/" + id);
+    return axios.get("/api/menu/" + id);
   },
   // Deletes the menu item with the given id
   deleteMenu: function(id) {
-    return axios.delete("/api/order/" + id);
+    return axios.delete("/api/menu/" + id);
   },
   // Saves a menu item to the database
   saveMenu: function(menuItem) {
-    return axios.post("/api/order", menuItem);
+    return axios.post("/api/menu", menuItem);
   }
 };
