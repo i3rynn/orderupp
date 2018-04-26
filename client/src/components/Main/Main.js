@@ -7,18 +7,18 @@ import * as Chooser from "./chooser";
 
 class Main extends Component {
   state = {
-    enteredPin: "",
+    // enteredPin: "",
     menuoptions: {},
     orderitems: []
   };
 
   componentDidMount() {
   	// check for user session
-    const enteredPin = localStorage.getItem('enteredPin');
-    if(!enteredPin){
-    	return this.props.history.push('/');
-    }
-    this.setState({enteredPin});
+    // const enteredPin = localStorage.getItem('enteredPin');
+    // if(!enteredPin){
+    // 	return this.props.history.push('/');
+    // }
+    // this.setState({enteredPin});
 
     // get all menu items
     API.getMenu()
@@ -37,7 +37,7 @@ class Main extends Component {
       */}
       <div>Fill in with footer info (total calulation)</div>
       </div>
-    );
+      );
   }
 }
 
