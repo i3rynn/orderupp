@@ -342,7 +342,7 @@ db.Item
 
 db.Order
 .remove({})
-.then(() => db.Order.collection.insertMany(orderSeed))
+.then(() => db.Order.collection.insertMany(...orderSeed))
 .then(data => {
   console.log(data.insertedIds.length + " records inserted!");
   console.log(data);

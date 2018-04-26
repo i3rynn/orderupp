@@ -5,7 +5,7 @@ import * as Order from "./order";
 import * as Foodcontainer from "./foodcontainer";
 import * as Chooser from "./chooser";
 
-class Order extends Component {
+class Main extends Component {
   state = {
     userpin: "",
     menuoptions: {},
@@ -40,4 +40,4 @@ class Order extends Component {
   }
 }
 
-export default Order;
+export default Main;
