@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
-import * as Order from "./order";
+import order from "./order";
 import Foodcontainer from "./foodcontainer";
-import * as Chooser from "./chooser";
+import Chooser from "./chooser";
 
 class Main extends Component {
   state = {
@@ -22,12 +22,14 @@ class Main extends Component {
   render() {
     return (
       <div>
+      <Chooser menuoptions={this.state.menuoptions} />
+      <div>
       <Foodcontainer />
-      {/* 
-      	<Order />
-      	<Chooser />
-      */}
-      <div>Fill in with footer info (total calulation)</div>
+      </div>
+      <Order orderitems={this.state.orderitems} />
+      <div>
+      Total: {this.state.orderitems.reduce((a, t) => a + t, 0)}
+      </div>
       </div>
       );
   }

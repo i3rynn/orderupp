@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/order");
   },
   // Gets the order with the given id
-  getOrder: function(id) {
+  getOrderById: function(id) {
     return axios.get("/api/order/" + id);
   },
   // Deletes the order with the given id
@@ -22,7 +22,7 @@ export default {
     return axios.get("/api/menu");
   },
   // Gets the menu item with the given id
-  getMenu: function(id) {
+  getMenuById: function(id) {
     return axios.get("/api/menu/" + id);
   },
   // Deletes the menu item with the given id
