@@ -11,6 +11,10 @@ class Main extends Component {
     orderitems: []
   };
 
+  displaySpecial = category => {
+    const specials = this.state.menuoptions.filter(item => item.category !== category);
+    this.setState({ menuoptions });
+  }
   componentDidMount() {
     // get all menu items
     API.getMenu()
@@ -22,8 +26,13 @@ class Main extends Component {
   render() {
     return (
       <div>
-      <Foodcontainer />
-      {/* 
+        {this.state.menuoptions.map(item => (
+          <foodcontainer
+            ingredientTitle ={item.name}
+            ingredientText = {item.description}
+          />
+        ))}
+      {/*
       	<Order />
       	<Chooser />
       */}

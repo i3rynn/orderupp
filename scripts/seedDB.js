@@ -12,16 +12,19 @@ const itemSeed = [
 {
   "category": "Kids",
   "name": "Chicken Fingers and Onion Rings",
+  "description": "Succulent tender all white meat chicken breast, battered to a golden hue of heavenly goodness, served with a side of divine onion rings ",
   "image": "Chicken_Fingers_and_Onion_Rings.jpg",
   "price": 10.65
 }, {
   "category": "Kids",
   "name": "Burger and Fries",
+  "description": "Just a simple classic American burger, served with classic fries. Lettuce, Cheese, Tomato, Onions",
   "image": "Burger_and_Fries.jpg",
   "price": 10.12
 }, {
   "category": "Kids",
   "name": "Koshier Hot Dog",
+  "description": "A delicious juicy all beef hot dog"
   "image": "Koshier_Hot_Dog.jpg",
   "price": 7.79
 }, {
