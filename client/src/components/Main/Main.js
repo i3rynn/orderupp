@@ -13,19 +13,26 @@ class Main extends Component {
   };
 
   displaySpecial = category => {
-    const specials = this.state.menuoptions.filter(item => item.category !== category);
-    this.setState({ menuoptions });
+    const specials = this.state.menuOptions.filter(item => item.category !== category);
+    this.setState({ menuOptions });
   }
   // ==============================================================
   // Component loads menu and sets a placholder in current items
   componentDidMount() {
     // get all menu items
     API.getMenu()
-    .then(menuoptions => {
-    	this.setState({menuoptions});
+    .then(menuOptions => {
+    	this.setState({menuOptions});
     });
 
-    // set currentSelection to placeholder values
+    this.setDefaultCurrent();
+  }
+
+  // ==============================================================
+  // Handle showing current item showing 
+  
+  // set currentSelection to placeholder values
+  setDefaultCurrent = () => {
     let placeholder = {
       _id: +new Date(),
       category: "",
@@ -37,25 +44,24 @@ class Main extends Component {
     this.setState({currentSelection: placeholder});
   }
 
-  // ==============================================================
-  // Handle showing current item showing 
-
-  // if item is in order, increment qty
-  // if item is not in order, add it 
-  handleAddOrder = () =>{
-
-    let newOrderItems = this.state.orderItems
-      .map(orderItem =>{
-        if(orderItem.name === currentSelection.name){
-
-        }
-        return orderItem;
-      });
+  // set currentSelection to a menu item
+  setCurrent = (index) => {
+    let currentSelection = this.state.menuOptions[index];
+    this.setState({currentSelection});
   }
 
   // ==============================================================
   // Handle adding and removing an item from the order 
 
+  // add item to order
+  addCurrentToOrder = () =>{
+    let newOrderItems = [...this.state.orderItems, this.state.currentSelection];
+    
+    // do we want to remove current selection when added to order?
+    // this.setDefaultCurrent();
+
+    this.setState({orderItems: newOrderItems});
+  }
 
   // ==============================================================
   // Render function 
