@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 
-var chooser = React.createClass({
-  render: function() {
+class Chooser extends Component {
+  render() {
     return (
       <div>
         <div className="button-menu" style={{float: 'right', margin: 10, marginLeft: '50%'}}>
@@ -23,4 +23,6 @@ var chooser = React.createClass({
       </div>
     );
   }
-});
+}
+
+export default Chooser;

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-
-import order from "./order";
+ 
 import Foodcontainer from "./foodcontainer";
+import Order from "./order";
 import Chooser from "./chooser";
 
 class Main extends Component {
@@ -12,10 +12,6 @@ class Main extends Component {
     currentSelection: {}
   };
 
-  displaySpecial = category => {
-    const specials = this.state.menuOptions.filter(item => item.category !== category);
-    this.setState({ menuOptions });
-  }
   // ==============================================================
   // Component loads menu and sets a placholder in current items
   componentDidMount() {
@@ -47,6 +43,7 @@ class Main extends Component {
   // set currentSelection to a menu item
   setCurrent = (index) => {
     let currentSelection = this.state.menuOptions[index];
+    currentSelection._id = +new Date();
     this.setState({currentSelection});
   }
 
@@ -59,6 +56,13 @@ class Main extends Component {
     
     // do we want to remove current selection when added to order?
     // this.setDefaultCurrent();
+
+    this.setState({orderItems: newOrderItems});
+  }
+
+  // remove item from order
+  removeFromOrder = index =>{
+    let newOrderItems = this.state.filter(item => item._id !== index);
 
     this.setState({orderItems: newOrderItems});
   }
@@ -77,10 +81,10 @@ class Main extends Component {
       <Foodcontainer {...this.state.currentSelection} /> : 
       null }
     
-      <Order orderItems={this.state.orderItems} />
+      <Order orderItems={this.state.orderItems} removeOrder={this.removeFromOrder} />
       </div>
       <div className="totalArea">
-        Total: {this.state.orderItems.reduce((a, t) => a + t, 0)}
+        Total: {this.state.orderItems.reduce((t, i) => t + i.price, 0)}
       </div>
       </React.Fragment>
       );
