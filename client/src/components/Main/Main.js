@@ -40,9 +40,17 @@ class Main extends Component {
   // ==============================================================
   // Handle showing current item showing 
 
+  // if item is in order, increment qty
+  // if item is not in order, add it 
   handleAddOrder = () =>{
 
+    let newOrderItems = this.state.orderItems
+      .map(orderItem =>{
+        if(orderItem.name === currentSelection.name){
 
+        }
+        return orderItem;
+      });
   }
 
   // ==============================================================
