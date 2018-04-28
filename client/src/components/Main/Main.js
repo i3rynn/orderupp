@@ -33,7 +33,7 @@ class Main extends Component {
       desc: ""
     }
     this.setState({currentSelection: placeholder});
-    
+
   }
 
   render() {
@@ -43,7 +43,9 @@ class Main extends Component {
       <Chooser menuOptions={this.state.menuOptions} />
       </div>
       <div className="orderArea">
-      <Foodcontainer {...this.state.currentSelection} />
+      
+      {this.state.currentSelection ? <Foodcontainer {...this.state.currentSelection} /> : null }
+    
       <Order orderItems={this.state.orderItems} />
       </div>
       <div className="totalArea">
