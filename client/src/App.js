@@ -8,7 +8,6 @@ const App = () => (
     <div>
       <Switch>
 		<Route path="/order" component={Main} />
-		<Redirect from="/" to="/order" />
         <Route component={NotFound} />
       </Switch>
     </div>
