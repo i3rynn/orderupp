@@ -10,188 +10,221 @@ mongoose.connect(
 
 const itemSeed = [
 {
-  "category": "Kids",
-  "name": "Chicken Fingers and Onion Rings",
-  "description": "Succulent tender all white meat chicken breast, battered to a golden hue of heavenly goodness, served with a side of divine onion rings ",
-  "image": "Chicken_Fingers_and_Onion_Rings.jpg",
-  "price": 10.65
+    "category": "Kids",
+    "name": "Chicken Fingers and Onion Rings",
+    "image": "Images/Kids/Chicken_Fingers_and_Onion_Rings.jpg",
+    "price": 10.21,
+    "desc": ""
 }, {
-  "category": "Kids",
-  "name": "Burger and Fries",
-  "description": "Just a simple classic American burger, served with classic fries. Lettuce, Cheese, Tomato, Onions",
-  "image": "Burger_and_Fries.jpg",
-  "price": 10.12
+    "category": "Kids",
+    "name": "Burger and Fries",
+    "image": "Images/Kids/Burger_and_Fries.jpg",
+    "price": 10.75,
+    "desc": ""
 }, {
-  "category": "Kids",
-  "name": "Koshier Hot Dog",
-  "description": "A delicious juicy all beef hot dog"
-  "image": "Koshier_Hot_Dog.jpg",
-  "price": 7.79
+    "category": "Kids",
+    "name": "Koshier Hot Dog",
+    "image": "Images/Kids/Koshier_Hot_Dog.jpg",
+    "price": 6.17,
+    "desc": ""
 }, {
-  "category": "Kids",
-  "name": "Margharetti Pizza",
-  "image": "Margharetti_Pizza.jpg",
-  "price": 8.50
+    "category": "Kids",
+    "name": "Margharetti Pizza",
+    "image": "Images/Kids/Margharetti_Pizza.jpg",
+    "price": 7.67,
+    "desc": ""
 }, {
-  "category": "Kids",
-  "name": "Pizza Bites and Fries",
-  "image": "Pizza_Bites_and_Fries.jpg",
-  "price": 8.90
+    "category": "Kids",
+    "name": "Pizza Bites and Fries",
+    "image": "Images/Kids/Pizza_Bites_and_Fries.jpg",
+    "price": 8.50,
+    "desc": ""
 }, {
-  "category": "Kids",
-  "name": "Spaghetti with Red Sauce",
-  "image": "Spaghetti_with_Red_Sauce.jpg",
-  "price": 9.28
+    "category": "Kids",
+    "name": "Spaghetti with Red Sauce",
+    "image": "Images/Kids/Spaghetti_with_Red_Sauce.jpg",
+    "price": 7.19,
+    "desc": ""
 }, {
-  "category": "Specials",
-  "name": "Alaskan King Crab Legs",
-  "image": "Alaskan_King_Crab_Legs.jpg",
-  "price": 9.18
+    "category": "Specials",
+    "name": "Alaskan King Crab Legs",
+    "image": "Images/Specials/Alaskan_King_Crab_Legs.jpg",
+    "price": 13.96,
+    "desc": ""
 }, {
-  "category": "Specials",
-  "name": "Artisan Burger",
-  "image": "Artisan_Burger.jpg",
-  "price": 11.77
+    "category": "Specials",
+    "name": "Artisan Burger",
+    "image": "Images/Specials/Artisan_Burger.jpg",
+    "price": 10.79,
+    "desc": ""
 }, {
-  "category": "Specials",
-  "name": "Clam and Mussel Broil",
-  "image": "Clam_and_Mussel_Broil.jpg",
-  "price": 9.26
+    "category": "Specials",
+    "name": "Clam and Mussel Broil",
+    "image": "Images/Specials/Clam_and_Mussel_Broil.jpg",
+    "price": 12.47,
+    "desc": ""
 }, {
-  "category": "Specials",
-  "name": "Garlic Lamb with Mashed Potatoes",
-  "image": "Garlic_Lamb_with_Mashed_Potatoes.jpg",
-  "price": 9.33
+    "category": "Specials",
+    "name": "Garlic Lamb with Mashed Potatoes",
+    "image": "Images/Specials/Garlic_Lamb_with_Mashed_Potatoes.jpg",
+    "price": 10.40,
+    "desc": ""
 }, {
-  "category": "Specials",
-  "name": "Sea Bass and New Potatoes",
-  "image": "Sea_Bass_and_New_Potatoes.jpg",
-  "price": 10.91
+    "category": "Specials",
+    "name": "Sea Bass and New Potatoes",
+    "image": "Images/Specials/Sea_Bass_and_New_Potatoes.jpg",
+    "price": 12.52,
+    "desc": ""
 }, {
-  "category": "Specials",
-  "name": "Spinach and Avacado Salad",
-  "image": "Spinach_and_Avacado_Salad.jpg",
-  "price": 13.66
+    "category": "Specials",
+    "name": "Spinach and Avacado Salad",
+    "image": "Images/Specials/Spinach_and_Avacado_Salad.jpg",
+    "price": 10.67,
+    "desc": ""
 }, {
-  "category": "Entrees",
-  "name": "Artisan Pizza with Peppers and Sausage",
-  "image": "Artisan_Pizza_with_Peppers_and_Sausage.jpg",
-  "price": 10.93
+    "category": "Entrees",
+    "name": "Artisan Pizza with Peppers and Sausage",
+    "image": "Images/Entrees/Artisan_Pizza_with_Peppers_and_Sausage.jpg",
+    "price": 9.11,
+    "desc": ""
 }, {
-  "category": "Entrees",
-  "name": "Fried Chicken Sandwich with Red Cabbage",
-  "image": "Fried_Chicken_Sandwich_with_Red_Cabbage.jpg",
-  "price": 14.39
+    "category": "Entrees",
+    "name": "Fried Chicken Sandwich with Red Cabbage",
+    "image": "Images/Entrees/Fried_Chicken_Sandwich_with_Red_Cabbage.jpg",
+    "price": 11.36,
+    "desc": ""
 }, {
-  "category": "Entrees",
-  "name": "Pesto Pasta with Tomatoes",
-  "image": "Pesto_Pasta_with_Tomatoes.jpg",
-  "price": 13.46
+    "category": "Entrees",
+    "name": "Pesto Pasta with Tomatoes",
+    "image": "Images/Entrees/Pesto_Pasta_with_Tomatoes.jpg",
+    "price": 12.87,
+    "desc": ""
 }, {
-  "category": "Entrees",
-  "name": "Pulled Pork Sandwich",
-  "image": "Pulled_Pork_Sandwich.jpg",
-  "price": 9.89
+    "category": "Entrees",
+    "name": "Pulled Pork Sandwich",
+    "image": "Images/Entrees/Pulled_Pork_Sandwich.jpg",
+    "price": 9.93,
+    "desc": ""
 }, {
-  "category": "Entrees",
-  "name": "Salmon and Vegetables",
-  "image": "Salmon_and_Vegetables.jpg",
-  "price": 9.82
+    "category": "Entrees",
+    "name": "Salmon and Vegetables",
+    "image": "Images/Entrees/Salmon_and_Vegetables.jpg",
+    "price": 9.16,
+    "desc": ""
 }, {
-  "category": "Entrees",
-  "name": "Steak and Broccoli",
-  "image": "Steak_and_Broccoli.jpg",
-  "price": 14.70
+    "category": "Entrees",
+    "name": "Steak and Broccoli",
+    "image": "Images/Entrees/Steak_and_Broccoli.jpg",
+    "price": 13.94,
+    "desc": ""
 }, {
-  "category": "Appetizers",
-  "name": "Caprese",
-  "image": "Caprese.jpg",
-  "price": 6.68
+    "category": "Appetizers",
+    "name": "Caprese",
+    "image": "Images/Appetizers/Caprese.jpg",
+    "price": 5.72,
+    "desc": ""
 }, {
-  "category": "Appetizers",
-  "name": "Loaded Fries",
-  "image": "Loaded_Fries.jpg",
-  "price": 6.22
+    "category": "Appetizers",
+    "name": "Loaded Fries",
+    "image": "Images/Appetizers/Loaded_Fries.jpg",
+    "price": 7.35,
+    "desc": ""
 }, {
-  "category": "Appetizers",
-  "name": "Loaded Nachos",
-  "image": "Loaded_Nachos.jpg",
-  "price": 6.55
+    "category": "Appetizers",
+    "name": "Loaded Nachos",
+    "image": "Images/Appetizers/Loaded_Nachos.jpg",
+    "price": 7.64,
+    "desc": ""
 }, {
-  "category": "Appetizers",
-  "name": "Squash Soup",
-  "image": "Squash_Soup.jpg",
-  "price": 6.42
+    "category": "Appetizers",
+    "name": "Squash Soup",
+    "image": "Images/Appetizers/Squash_Soup.jpg",
+    "price": 7.32,
+    "desc": ""
 }, {
-  "category": "Appetizers",
-  "name": "Steamed Dumplings",
-  "image": "Steamed_Dumplings.jpg",
-  "price": 6.20
+    "category": "Appetizers",
+    "name": "Steamed Dumplings",
+    "image": "Images/Appetizers/Steamed_Dumplings.jpg",
+    "price": 5.46,
+    "desc": ""
 }, {
-  "category": "Appetizers",
-  "name": "Street Tacos",
-  "image": "Street_Tacos.jpg",
-  "price": 6.44
+    "category": "Appetizers",
+    "name": "Street Tacos",
+    "image": "Images/Appetizers/Street_Tacos.jpg",
+    "price": 5.39,
+    "desc": ""
 }, {
-  "category": "Desserts",
-  "name": "Cake Parfait",
-  "image": "Cake_Parfait.jpg",
-  "price": 7.58
+    "category": "Desserts",
+    "name": "Cake Parfait",
+    "image": "Images/Desserts/Cake_Parfait.jpg",
+    "price": 7.81,
+    "desc": ""
 }, {
-  "category": "Desserts",
-  "name": "Chocolate Cake",
-  "image": "Chocolate_Cake.jpg",
-  "price": 7.12
+    "category": "Desserts",
+    "name": "Chocolate Cake",
+    "image": "Images/Desserts/Chocolate_Cake.jpg",
+    "price": 5.30,
+    "desc": ""
 }, {
-  "category": "Desserts",
-  "name": "Cranberry Muffins",
-  "image": "Cranberry_Muffins.jpg",
-  "price": 6.82
+    "category": "Desserts",
+    "name": "Cranberry Muffins",
+    "image": "Images/Desserts/Cranberry_Muffins.jpg",
+    "price": 6.66,
+    "desc": ""
 }, {
-  "category": "Desserts",
-  "name": "Macaroons",
-  "image": "Macaroons.jpg",
-  "price": 7.98
+    "category": "Desserts",
+    "name": "Macaroons",
+    "image": "Images/Desserts/Macaroons.jpg",
+    "price": 6.83,
+    "desc": ""
 }, {
-  "category": "Desserts",
-  "name": "Pecan Pudding",
-  "image": "Pecan_Pudding.jpg",
-  "price": 6.87
+    "category": "Desserts",
+    "name": "Pecan Pudding",
+    "image": "Images/Desserts/Pecan_Pudding.jpg",
+    "price": 5.96,
+    "desc": ""
 }, {
-  "category": "Desserts",
-  "name": "Rasberry and Chocolate Tart",
-  "image": "Rasberry_and_Chocolate_Tart.jpg",
-  "price": 5.95
+    "category": "Desserts",
+    "name": "Rasberry and Chocolate Tart",
+    "image": "Images/Desserts/Rasberry_and_Chocolate_Tart.jpg",
+    "price": 6.98,
+    "desc": ""
 }, {
-  "category": "Drinks",
-  "name": "Blue Ice and Lime Cocktail",
-  "image": "Blue_Ice_and_Lime_Cocktail.jpg",
-  "price": 3.27
+    "category": "Drinks",
+    "name": "Blue Ice and Lime Cocktail",
+    "image": "Images/Drinks/Blue_Ice_and_Lime_Cocktail.jpg",
+    "price": 2.48,
+    "desc": ""
 }, {
-  "category": "Drinks",
-  "name": "Bottled Coke",
-  "image": "Bottled_Coke.jpg",
-  "price": 3.48
+    "category": "Drinks",
+    "name": "Bottled Coke",
+    "image": "Images/Drinks/Bottled_Coke.jpg",
+    "price": 4.50,
+    "desc": ""
 }, {
-  "category": "Drinks",
-  "name": "Early Grey Tea",
-  "image": "Early_Grey_Tea.jpg",
-  "price": 3.80
+    "category": "Drinks",
+    "name": "Early Grey Tea",
+    "image": "Images/Drinks/Early_Grey_Tea.jpg",
+    "price": 3.34,
+    "desc": ""
 }, {
-  "category": "Drinks",
-  "name": "Latte",
-  "image": "Latte.jpg",
-  "price": 3.80
+    "category": "Drinks",
+    "name": "Latte",
+    "image": "Images/Drinks/Latte.jpg",
+    "price": 4.64,
+    "desc": ""
 }, {
-  "category": "Drinks",
-  "name": "Mixed Berry Daiquiri",
-  "image": "Mixed_Berry_Daiquiri.jpg",
-  "price": 4.60
+    "category": "Drinks",
+    "name": "Mixed Berry Daiquiri",
+    "image": "Images/Drinks/Mixed_Berry_Daiquiri.jpg",
+    "price": 2.74,
+    "desc": ""
 }, {
-  "category": "Drinks",
-  "name": "Strawberry and Watermelon Slush",
-  "image": "Strawberry_and_Watermelon_Slush.jpg",
-  "price": 3.37
+    "category": "Drinks",
+    "name": "Strawberry and Watermelon Slush",
+    "image": "Images/Drinks/Strawberry_and_Watermelon_Slush.jpg",
+    "price": 2.92,
+    "desc": ""
 }
 ];
 
