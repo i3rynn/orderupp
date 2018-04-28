@@ -16,6 +16,8 @@ class Main extends Component {
     const specials = this.state.menuoptions.filter(item => item.category !== category);
     this.setState({ menuoptions });
   }
+  // ==============================================================
+  // Component loads menu and sets a placholder in current items
   componentDidMount() {
     // get all menu items
     API.getMenu()
@@ -33,9 +35,22 @@ class Main extends Component {
       desc: ""
     }
     this.setState({currentSelection: placeholder});
+  }
+
+  // ==============================================================
+  // Handle showing current item showing 
+
+  handleAddOrder = () =>{
+
 
   }
 
+  // ==============================================================
+  // Handle adding and removing an item from the order 
+
+
+  // ==============================================================
+  // Render function 
   render() {
     return (
       <React.Fragment>
@@ -44,7 +59,9 @@ class Main extends Component {
       </div>
       <div className="orderArea">
       
-      {this.state.currentSelection ? <Foodcontainer {...this.state.currentSelection} /> : null }
+      {this.state.currentSelection ? 
+      <Foodcontainer {...this.state.currentSelection} /> : 
+      null }
     
       <Order orderItems={this.state.orderItems} />
       </div>
