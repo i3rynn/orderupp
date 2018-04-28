@@ -8,7 +8,8 @@ import Chooser from "./chooser";
 class Main extends Component {
   state = {
     menuoptions: {},
-    orderitems: []
+    orderitems: [],
+    currentView: {}
   };
 
   displaySpecial = category => {
@@ -25,20 +26,12 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
-
-        {this.state.menuoptions.map(item => (
-          <foodcontainer
-            ingredientTitle ={item.name}
-            ingredientText = {item.description}
-          />
-        ))}
-      {/*
-      	<Order />
-      	<Chooser />
-      */}
-      <div>Fill in with footer info (total calulation)</div>
+      <React.Fragment>
       <Chooser menuoptions={this.state.menuoptions} />
+      {this.state.currentView ? 
+        <Foodcontainer {...this.state.currentView} /> :
+        null
+      }
       <div>
       <Foodcontainer />
       </div>
@@ -47,7 +40,7 @@ class Main extends Component {
       Total: {this.state.orderitems.reduce((a, t) => a + t, 0)}
       </div>
 
-      </div>
+      </React.Fragment>
       );
   }
 }
