@@ -1,26 +1,58 @@
 import React, { Component } from "react";
+import "./chooser.css";
 
 class Chooser extends Component {
+  state = {
+    categories: ["Specials", "Entrees", "Appetizers", "Desserts", "Drinks", "Kids"],
+    shownCategory: "Specials"
+  }
+
+  // ==============================================================
+  // Category Interactions
+
+  renderCategoryButton = category => (
+    <button 
+    className="btn btn-primary"
+    onClick={() => this.switchCategory(category)} 
+    key={category}
+    >
+    {category}
+    </button>
+    )
+
+  shownCategory = () =>{
+    return this.props.menuOptions
+      .filter(item => item.category === this.state.shownCategory)
+      .map(item => (
+        <div className="thumbnail-wrapper" key={item._id}>
+        <img 
+        src={item.image} 
+        onClick={() => this.props.setCurrent(item._id)}
+        alt={item.name} />
+        </div>
+        ))
+  }
+
+  switchCategory = category =>{
+    console.log(this.props.menuOptions);
+    console.log(category);
+
+    this.setState({shownCategory: category});
+  }
+
+  // ==============================================================
+  // Render function 
+
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="button-menu" style={{float: 'right', margin: 10, marginLeft: '50%'}}>
-          <button className="btn btn-primary" type="submit">Appetizers</button>
-          <button className="btn btn-primary" type="submit">Entrees</button>
-          <button className="btn btn-primary" type="submit">Kids</button>
-          <button className="btn btn-primary" type="submit">Desserts</button>
-          <button className="btn btn-primary" type="submit">Specials</button>
-          <button className="btn btn-primary" type="submit">Drinks</button>
+          {this.state.categories.map(this.renderCategoryButton)}
         </div>
         <div className="food-thumbnails" style={{float: 'right', marginLeft: '40%'}}>
-          <img src="http://via.placeholder.com/300x300" style={{width: 100, borderRadius: '50%', margin: 5}} alt="Avatar" />  
-          <img src="http://via.placeholder.com/300x300" style={{width: 100, borderRadius: '50%', margin: 5}} alt="Avatar" />  
-          <img src="http://via.placeholder.com/300x300" style={{width: 100, borderRadius: '50%', margin: 5}} alt="Avatar" />  
-          <img src="http://via.placeholder.com/300x300" style={{width: 100, borderRadius: '50%', margin: 5}} alt="Avatar" />  
-          <img src="http://via.placeholder.com/300x300" style={{width: 100, borderRadius: '50%', margin: 5}} alt="Avatar" />  
-          <img src="http://via.placeholder.com/300x300" style={{width: 100, borderRadius: '50%', margin: 5}} alt="Avatar" />  
+          {this.props.menuOptions.length > 0 ? this.shownCategory() : null}
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

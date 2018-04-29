@@ -17,8 +17,8 @@ class Main extends Component {
   componentDidMount() {
     // get all menu items
     API.getMenu()
-    .then(menuOptions => {
-    	this.setState({menuOptions});
+    .then(data => {
+    	this.setState({menuOptions: data.data});
     });
 
     this.setDefaultCurrent();
@@ -42,8 +42,7 @@ class Main extends Component {
 
   // set currentSelection to a menu item
   setCurrent = (index) => {
-    let currentSelection = this.state.menuOptions[index];
-    currentSelection._id = +new Date();
+    let currentSelection = this.state.menuOptions.filter(option => option._id === index)[0];
     this.setState({currentSelection});
   }
 
@@ -52,7 +51,8 @@ class Main extends Component {
 
   // add item to order
   addCurrentToOrder = () =>{
-    let newOrderItems = [...this.state.orderItems, this.state.currentSelection];
+    let addedItem = {...this.state.currentSelection, _id: +new Date()};
+    let newOrderItems = [...this.state.orderItems, addedItem];
     
     // do we want to remove current selection when added to order?
     // this.setDefaultCurrent();
@@ -62,7 +62,7 @@ class Main extends Component {
 
   // remove item from order
   removeFromOrder = index =>{
-    let newOrderItems = this.state.filter(item => item._id !== index);
+    let newOrderItems = this.state.orderItems.filter(item => item._id !== index);
 
     this.setState({orderItems: newOrderItems});
   }
@@ -72,18 +72,18 @@ class Main extends Component {
   render() {
     return (
       <React.Fragment>
-      <div className="headerArea">
-      <Chooser menuOptions={this.state.menuOptions} />
+      <div className="menuSelection mb-4">
+      <Chooser menuOptions={this.state.menuOptions} setCurrent={this.setCurrent} />
       </div>
-      <div className="orderArea">
+      <div className="orderArea w-100 d-flex justify-content-between">
       
       {this.state.currentSelection ? 
-      <Foodcontainer {...this.state.currentSelection} /> : 
+      <Foodcontainer {...this.state.currentSelection} addToOrder={this.addCurrentToOrder} /> : 
       null }
     
       <Order orderItems={this.state.orderItems} removeOrder={this.removeFromOrder} />
       </div>
-      <div className="totalArea">
+      <div className="totalArea mt-4 display-4">
         Total: {this.state.orderItems.reduce((t, i) => t + i.price, 0)}
       </div>
       </React.Fragment>

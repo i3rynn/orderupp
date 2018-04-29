@@ -1,0 +1,16 @@
+.food-thumbnails{
+	display: inline-flex;
+}
+
+.thumbnail-wrapper{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	overflow: hidden;
+	display: flex;
+}
+
+.thumbnail-wrapper img{
+	width: 100%;
+	height: auto
+}

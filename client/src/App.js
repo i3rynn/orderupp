@@ -5,12 +5,11 @@ import NotFound from "./components/NotFound";
 
 const App = () => (
   <Router>
-    <div>
       <Switch>
 		<Route path="/order" component={Main} />
+		<Redirect from="/" to="/order" />
         <Route component={NotFound} />
       </Switch>
-    </div>
   </Router>
 );
 

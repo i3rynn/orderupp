@@ -4,13 +4,13 @@ import OrderItem from "./orderItem";
 class Order extends Component {
   render() {
     return (
-      <div>
+      <div className="right order-wrapper">
       <h3>Items added to your order</h3>
       {this.props.orderItems.map(item => (
-        <OrderItem key={item._id} {...item} removeOrder={this.props.removeOrder} />
+        <OrderItem key={item._id} {...item} removeOrder={() => this.props.removeOrder(item._id)} />
         ))}
       </div>
-      );
+      )
   }
 }
 

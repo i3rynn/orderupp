@@ -2,17 +2,20 @@ import React from "react";
 import "./foodcontainer.css";
 
 const Foodcontainer = props => (
-	<React.Fragment>
+	<div className="left foodcontainer">
 	<img src={props.image} alt={props.name} className="img-thumbnail" />
 
 	<div className="card">
 	<div className="card-body">
 	<h5 className="card-title">{props.name}</h5>
 	<p className="card-text">{props.desc}</p>
-	<button className="btn btn-primary" onClick={props.addOrder}>Add to Order</button>
+	{props.category !== "" ? 
+	<button className="btn btn-primary" onClick={props.addToOrder}>Add to Order</button> :
+	<button className="btn btn-primary" disabled>Choose an Item</button>
+	}
 	</div>
 	</div>
-	</React.Fragment>
+	</div>
 );
 
 export default Foodcontainer;
