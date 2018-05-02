@@ -70,6 +70,7 @@ class Main extends Component {
   // ==============================================================
   // Render function 
   render() {
+    const total = Math.round(this.state.orderItems.reduce((t, i) => t + i.price, 0) * 100)/100;
     return (
       <React.Fragment>
       <div className="menuSelection mb-4">
@@ -84,7 +85,7 @@ class Main extends Component {
       <Order orderItems={this.state.orderItems} removeOrder={this.removeFromOrder} />
       </div>
       <div className="totalArea mt-4 display-4">
-        Total: {this.state.orderItems.reduce((t, i) => t + i.price, 0)}
+        Total: {total}
       </div>
       </React.Fragment>
       );

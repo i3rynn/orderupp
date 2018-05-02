@@ -9,6 +9,7 @@ const Foodcontainer = props => (
 	<div className="card-body">
 	<h5 className="card-title">{props.name}</h5>
 	<p className="card-text">{props.desc}</p>
+	<p className="card-text">{props.price}</p>
 	{props.category !== "" ? 
 	<button className="btn btn-primary" onClick={props.addToOrder}>Add to Order</button> :
 	<button className="btn btn-primary" disabled>Choose an Item</button>
