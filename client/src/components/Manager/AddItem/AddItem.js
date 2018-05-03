@@ -37,6 +37,14 @@ class AddItem extends Component {
     return (
       <div>
         <h1>Add an item to the menu</h1>
+        <div>
+          <h2>Select a Category</h2>
+          <button>Specials</button>
+          <button>Kids</button>
+          <button>Entrees</button>
+          <button>Desserts</button>
+          <button>Drinks</button>
+        </div>
         <form className="form">
           <input
             value={this.state.newItem}
