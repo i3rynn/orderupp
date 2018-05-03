@@ -7,7 +7,7 @@ import Chooser from "./chooser";
 
 class Main extends Component {
   state = {
-    menuOptions: {},
+    menuOptions: [],
     orderItems: [],
     currentSelection: {}
   };
