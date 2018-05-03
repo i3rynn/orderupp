@@ -30,7 +30,7 @@ class AddItem extends Component {
   };
 
   pushNewItem = () => {
-
+    
   }
 
   render() {
@@ -39,11 +39,11 @@ class AddItem extends Component {
         <h1>Add an item to the menu</h1>
         <div>
           <h2>Select a Category</h2>
-          <button>Specials</button>
-          <button>Kids</button>
-          <button>Entrees</button>
-          <button>Desserts</button>
-          <button>Drinks</button>
+          <button value="Specials">Specials</button>
+          <button value="Kids">Kids</button>
+          <button value="Entrees">Entrees</button>
+          <button value="Desserts">Desserts</button>
+          <button value="Drinks">Drinks</button>
         </div>
         <form className="form">
           <input
