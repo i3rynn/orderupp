@@ -5,7 +5,7 @@ import AddItem from "./AddItem";
 
 class Manager extends Component {
   state = {
-    menuOptions: {}
+    menuOptions: []
   };
 
   // ==============================================================
@@ -23,7 +23,12 @@ class Manager extends Component {
   // ==============================================================
   // Handle adding and deleting items 
   
-  setDefaultCurrent = () => {
+  handleDelete = index => {
+    API.deleteMenu(index)
+    .then(data => {
+      const restOfMenu = this.state.menuOptions.filter(item => item._id !== index);
+      this.setState({menuOptions = restOfMenu});
+    });
   }
 
 
