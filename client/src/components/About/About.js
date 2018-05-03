@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import "./AboutImages";
 
-const About = () => {
+const About = () => (
   <div>
   <h1>Meet the Staff</h1>
   <div className="card">
@@ -118,5 +118,6 @@ const About = () => {
     </div>
   </div>
 </div>
+);
 
-}
+export default About;

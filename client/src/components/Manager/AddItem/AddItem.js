@@ -30,7 +30,7 @@ class AddItem extends Component {
   };
 
   pushNewItem = () => {
-    
+
   }
 
   render() {
@@ -79,8 +79,6 @@ class AddItem extends Component {
       </div>
     );
   }
-
-
-
-
 }
+
+export default Additem;
