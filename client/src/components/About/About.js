@@ -2,6 +2,8 @@ import React from "react";
 import "./About.css"
 
 const About = () => {
+  <div>
+  <h1>Meet the Staff</h1>
   <div className="card">
     <div className="img-container">
       <img alt=  src= />
@@ -114,5 +116,6 @@ const About = () => {
       </ul>
     </div>
   </div>
+</div>
 
 }
