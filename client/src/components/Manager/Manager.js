@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
  
 import AddItem from "./AddItem";
+import MenuItem from "./MenuItem";
 
 class Manager extends Component {
   state = {
@@ -23,6 +24,14 @@ class Manager extends Component {
   // ==============================================================
   // Handle adding and deleting items 
   
+  handleAdd = newMenuItem => {
+    API.getMenu(newMenuItem)
+    .then(data => {
+      const totalMenu = [...this.state.menuOptions, newMenuItem];
+      this.setState({menuOptions = totalMenu});
+    });
+  }  
+
   handleDelete = index => {
     API.deleteMenu(index)
     .then(data => {
@@ -37,19 +46,21 @@ class Manager extends Component {
   render() {
     return (
       <React.Fragment>
-      <div className="menuSelection mb-4">
-      <Chooser menuOptions={this.state.menuOptions} setCurrent={this.setCurrent} />
+      <h1 className="display-1">Manage</h1>
+      <div className="container">
+      <div className="card">
+      <ul className="list-group list-group-flush">
+        {this.state.menuOptions ? 
+          this.state.menuOptions.map(item =>(
+
+          )) :
+          null}
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
       </div>
-      <div className="orderArea w-100 d-flex justify-content-between">
-      
-      {this.state.currentSelection ? 
-      <Foodcontainer {...this.state.currentSelection} addToOrder={this.addCurrentToOrder} /> : 
-      null }
-    
-      <Order orderItems={this.state.orderItems} removeOrder={this.removeFromOrder} />
-      </div>
-      <div className="totalArea mt-4 display-4">
-        Total: {total}
       </div>
       </React.Fragment>
       );
