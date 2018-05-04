@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./AddItem.css";
 
 class AddItem extends Component {
   state = {
@@ -81,4 +80,4 @@ class AddItem extends Component {
   }
 }
 
-export default Additem;
+export default AddItem;
