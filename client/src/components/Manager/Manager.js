@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
  
-import AddItem from "./AddItem";
-import MenuItem from "./MenuItem";
+import AddItem from "./AddItem/AddItem";
+import MenuItem from "./MenuItem/MenuItem";
 
 class Manager extends Component {
   state = {
@@ -17,8 +17,6 @@ class Manager extends Component {
     .then(data => {
     	this.setState({menuOptions: data.data});
     });
-
-    this.setDefaultCurrent();
   }
 
   // ==============================================================
@@ -28,7 +26,7 @@ class Manager extends Component {
     API.getMenu(newMenuItem)
     .then(data => {
       const totalMenu = [...this.state.menuOptions, newMenuItem];
-      this.setState({menuOptions = totalMenu});
+      this.setState({menuOptions: totalMenu});
     });
   }  
 
@@ -36,7 +34,7 @@ class Manager extends Component {
     API.deleteMenu(index)
     .then(data => {
       const restOfMenu = this.state.menuOptions.filter(item => item._id !== index);
-      this.setState({menuOptions = restOfMenu});
+      this.setState({menuOptions: restOfMenu});
     });
   }
 
@@ -52,13 +50,9 @@ class Manager extends Component {
       <ul className="list-group list-group-flush">
         {this.state.menuOptions ? 
           this.state.menuOptions.map(item =>(
-
+          <MenuItem {...item} delete={this.handleDelete} />
           )) :
           null}
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
       </ul>
       </div>
       </div>
@@ -67,4 +61,4 @@ class Manager extends Component {
   }
 }
 
-export default Main;
+export default Manager;
