@@ -9,7 +9,7 @@ const MenuItem = (props) =>(
 	<div className="d-flex">
 	{props.desc} 
 	</div>
-	<button className="btn btn-outline-danger float-right" onClick={()=>this.props.delete(this.props._id)}>
+	<button className="btn btn-outline-danger float-right" onClick={() => props.delete(props._id)}>
 	Delete Menu Item
 	</button>
 	</li>

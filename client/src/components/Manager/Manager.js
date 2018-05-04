@@ -23,9 +23,10 @@ class Manager extends Component {
   // Handle adding and deleting items 
   
   handleAdd = newMenuItem => {
-    API.getMenu(newMenuItem)
+    API.saveMenu(newMenuItem)
     .then(data => {
-      const totalMenu = [...this.state.menuOptions, newMenuItem];
+      const savedMenuItem = data.data;
+      const totalMenu = [...this.state.menuOptions, savedMenuItem];
       this.setState({menuOptions: totalMenu});
     });
   }  
@@ -47,10 +48,13 @@ class Manager extends Component {
       <h1 className="display-1">Manage</h1>
       <div className="container">
       <div className="card">
+      <AddItem add={this.handleAdd} />
+      </div>
+      <div className="card">
       <ul className="list-group list-group-flush">
         {this.state.menuOptions ? 
           this.state.menuOptions.map(item =>(
-          <MenuItem {...item} delete={this.handleDelete} />
+          <MenuItem key={item._id || +new Date()} {...item} delete={this.handleDelete} />
           )) :
           null}
       </ul>
