@@ -25,7 +25,7 @@ class Chooser extends Component {
     const menu = this.props.menuOptions
       .filter(item => item.category === this.state.shownCategory)
       .map(item => (
-        <div key={item._id}>
+        <div key={item._id} className="thumbnail-wrapper">
         <img 
         src={item.image} 
         onClick={() => this.props.setCurrent(item._id)}
@@ -52,14 +52,14 @@ class Chooser extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1
     };
 
     // console.log(this.props.menuOptions);
     return (
       <React.Fragment>
-      {this.renderCategoryButton()}
+      {this.state.categories.map(category => this.renderCategoryButton(category))}
       <Slider {...settings}>
         {this.shownCategory()}
       </Slider>
