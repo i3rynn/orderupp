@@ -20,6 +20,7 @@ import React from 'react';
 import { Route, Router } from 'react-router-dom';
 import AppLogin from './AppLogin';
 import Main from "./components/Main";
+import Manager from "./components/Manager";
 import NotFound from "./components/NotFound";
 import Home from './Home/Home';
 //import Order from './Order/Order';
@@ -41,7 +42,8 @@ export const makeMainRoutes = () => {
         <div>
           <Route path="/" render={(props) => <AppLogin auth={auth} {...props} />} />
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          <Route path="/order" render={(props) => <Main auth={auth} {...props} />} />
+          <Route path="/manager" render={(props) => <Manager auth={auth} {...props} />} />
+          <Route path="/order" component={Main} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback {...props} /> 
