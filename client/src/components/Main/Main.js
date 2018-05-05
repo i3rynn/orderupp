@@ -4,13 +4,15 @@ import API from "../../utils/API";
 import Foodcontainer from "./foodcontainer";
 import Order from "./order";
 import Chooser from "./chooser";
+import SuccessModal from "./successmodal";
 import "./Main.css";
 
 class Main extends Component {
   state = {
     menuOptions: [],
     orderItems: [],
-    currentSelection: {}
+    currentSelection: {},
+    currentlyOrdering: true
   };
 
   // ==============================================================
@@ -68,9 +70,32 @@ class Main extends Component {
     this.setState({orderItems: newOrderItems});
   }
 
+
+  // ==============================================================
+  // Handle submitting an order and reseting to hide nice 
+
   // submit order
   submitOrder = () => {
-    console.log(this.state);
+    if(!this.state.orderItems){ return }
+      const items = this.state.orderItems.map( item => {
+        return {name: item.name, price: item.price, image: item.image}
+      });
+    console.log(items);
+
+    API.saveOrder({items, forWho: 10})
+    .then(data => {
+      console.log('save data', data);
+      this.setDefaultCurrent();
+      this.setState({
+        currentlyOrdering: false,
+        orderItems: []
+      });
+    });
+  }
+
+  // set currently ordering to true
+  startNewOrder = () => {
+    this.setState({currentlyOrdering: true});
   }
 
   // ==============================================================
@@ -99,6 +124,11 @@ class Main extends Component {
         <button onClick={this.submitOrder}>Submit Order</button>
       </div>
       </div>
+      {
+        this.state.currentlyOrdering ?
+        null :
+        <SuccessModal hideModal={this.startNewOrder} />
+      }
       </React.Fragment>
       );
   }
