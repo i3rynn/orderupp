@@ -68,6 +68,11 @@ class Main extends Component {
     this.setState({orderItems: newOrderItems});
   }
 
+  // submit order
+  submitOrder = () =>{
+    console.log(this.state);
+  }
+
   // ==============================================================
   // Render function 
   render() {
@@ -87,7 +92,12 @@ class Main extends Component {
       <Order orderItems={this.state.orderItems} removeOrder={this.removeFromOrder} />
       </div>
       <div className="totalArea mt-4 display-4">
+        <div>
         Total: {total}
+        </div>
+        <div>
+        <button onClick={this.submitOrder}>Submit Order</button>
+        </div>
       </div>
       </React.Fragment>
       );
