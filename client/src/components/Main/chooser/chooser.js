@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./chooser.css";
+// import Flickity from 'react-flickity-component';
+import Slider from "react-slick";
 
 class Chooser extends Component {
   state = {
     categories: ["Specials", "Entrees", "Appetizers", "Desserts", "Drinks", "Kids"],
     shownCategory: "Specials"
   }
-
   // ==============================================================
   // Category Interactions
 
@@ -21,21 +22,24 @@ class Chooser extends Component {
     )
 
   shownCategory = () =>{
-    return this.props.menuOptions
+    const menu = this.props.menuOptions
       .filter(item => item.category === this.state.shownCategory)
       .map(item => (
-        <div className="thumbnail-wrapper" key={item._id}>
+        <div key={item._id}>
         <img 
         src={item.image} 
         onClick={() => this.props.setCurrent(item._id)}
         alt={item.name} />
         </div>
-        ))
+        ));
+
+      console.log(menu);
+      return menu
   }
 
   switchCategory = category =>{
-    console.log(this.props.menuOptions);
-    console.log(category);
+    // console.log(this.props.menuOptions);
+    // console.log(category);
 
     this.setState({shownCategory: category});
   }
@@ -44,14 +48,21 @@ class Chooser extends Component {
   // Render function 
 
   render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
+    // console.log(this.props.menuOptions);
     return (
       <React.Fragment>
-        <div className="button-menu" style={{float: 'right', margin: 10, marginLeft: '50%'}}>
-          {this.state.categories.map(this.renderCategoryButton)}
-        </div>
-        <div className="food-thumbnails" style={{float: 'right', marginLeft: '40%'}}>
-          {this.props.menuOptions.length > 0 ? this.shownCategory() : null}
-        </div>
+      {this.renderCategoryButton()}
+      <Slider {...settings}>
+        {this.shownCategory()}
+      </Slider>
       </React.Fragment>
     );
   }
