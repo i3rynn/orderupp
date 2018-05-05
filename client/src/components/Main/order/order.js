@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import OrderItem from "./orderItem";
+import "./order.css";
 
 class Order extends Component {
   render() {
