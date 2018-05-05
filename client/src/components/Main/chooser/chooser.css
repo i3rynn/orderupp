@@ -8,9 +8,16 @@
 	border-radius: 100%;
 	overflow: hidden;
 	display: flex;
+	margin: 5px;
 }
 
 .thumbnail-wrapper img{
 	width: 100%;
-	height: auto
+	height: auto;
+}
+
+.btn-primary {
+	margin: 5px;
+	background-color: #ee4036;
+	border-color: #ee4036;
 }

@@ -4,6 +4,7 @@ import API from "../../utils/API";
 import Foodcontainer from "./foodcontainer";
 import Order from "./order";
 import Chooser from "./chooser";
+import "./Main.css";
 
 class Main extends Component {
   state = {
@@ -74,6 +75,7 @@ class Main extends Component {
     return (
       <React.Fragment>
       <div className="menuSelection mb-4">
+      <img src="Order-Up-w-text.png" alt="Order Up logo" />
       <Chooser menuOptions={this.state.menuOptions} setCurrent={this.setCurrent} />
       </div>
       <div className="orderArea w-100 d-flex justify-content-between">

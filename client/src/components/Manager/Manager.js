@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
  
 import AddItem from "./AddItem/AddItem";
-import MenuItem from "./MenuItem/MenuItem";
+import MenuItem from "./menuitem/menuitem";
 
 class Manager extends Component {
   state = {
