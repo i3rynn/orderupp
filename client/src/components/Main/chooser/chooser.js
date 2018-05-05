@@ -41,9 +41,17 @@ class Chooser extends Component {
   }
 
   // ==============================================================
-  // Render function 
+  // Render function
 
   render() {
+      const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }; 
+
     return (
       <React.Fragment>
         <div className="button-menu" style={{float: 'right', margin: 10, marginLeft: '50%'}}>
