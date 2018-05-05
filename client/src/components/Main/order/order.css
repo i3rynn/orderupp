@@ -1,0 +1,11 @@
+.h3, h3 {
+	margin-right: 20px;
+	text-align: center;
+}
+
+.right.order-wrapper {
+	background-color: #ee4036;
+	width: 50%;
+	height: 30%;
+	margin-right: 10px;
+}
