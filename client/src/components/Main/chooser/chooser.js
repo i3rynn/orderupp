@@ -25,11 +25,11 @@ class Chooser extends Component {
     const menu = this.props.menuOptions
       .filter(item => item.category === this.state.shownCategory)
       .map(item => (
-        <div key={item._id} className="thumbnail-wrapper">
-        <img 
-        src={item.image} 
-        onClick={() => this.props.setCurrent(item._id)}
-        alt={item.name} />
+        <div key={item._id}>
+          <img 
+          src={item.image} 
+          onClick={() => this.props.setCurrent(item._id)}
+          alt={item.name} />
         </div>
         ));
 
