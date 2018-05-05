@@ -1,0 +1,11 @@
+div.left.foodcontainer {
+	margin: 10px;
+	float: left;
+	max-height: 295px;
+	max-height: 295px;
+}
+
+.food-description {
+	float: right;
+	width: 20rem;
+}
