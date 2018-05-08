@@ -53,6 +53,18 @@ const itemSeed = [
     "desc": "Alaska King Crab is unmatched in flavor and texture. The succulent, mildly sweet meat is snow-white and tender, with highlights of bright red. Large stockpot with a steamer insert, add beer, lemons and garlic and bring to a boil. Serve with drawn butter."
 }, {
     "category": "Specials",
+    "name": "Seared Veal with Asparagus",
+    "image": "Images/Specials/Veal_with_Asparagus.jpg",
+    "price": 18.00,
+    "desc": "8 oz. filet of USDA Veal sliced and seared in a combination of premium oils served with grilled asparagus and tomatoes."
+}, {
+    "category": "Specials",
+    "name": "Thai Noodles",
+    "image": "Images/Specials/Thai_Noodles.jpg",
+    "price": 14.00,
+    "desc": "A classic Oriental dish. Sauteed noodles cooked in sesame and peanut oil served with steak chunks and fried tofu mixed with bean sprouts and green onions."
+}, {
+    "category": "Specials",
     "name": "Artisan Burger",
     "image": "Images/Specials/Artisan_Burger.jpg",
     "price": 10.79,
@@ -117,6 +129,18 @@ const itemSeed = [
     "image": "Images/Entrees/Steak_and_Broccoli.jpg",
     "price": 13.94,
     "desc": "Large skillet steak in classic ginger soy sauce with stir-fried broccoli and onion. Served with white rice."
+}, {
+    "category": "Entrees",
+    "name": "Sauteed Fish Broil",
+    "image": "Images/Entrees/Fish_Sautee.jpg",
+    "price": 15.00,
+    "desc": "Pan fried white fish (Market Selection) broiled in a wine and cream sauce with steamed greens."
+}, {
+    "category": "Entrees",
+    "name": "Pork Chops",
+    "image": "Images/Entrees/Pork_Chops.jpg",
+    "price": 12.50,
+    "desc": "10 oz. cut of Pork Chop slow roasted and then seared. Served with a garlic sauce and red potatoes over fresh green vegetables."    
 }, {
     "category": "Appetizers",
     "name": "Caprese",
@@ -227,7 +251,6 @@ const itemSeed = [
     "desc": "Strawberry Watermelon Fruit Slush. Can be frozen or serve as a drink!"
 }
 ];
-
 
 
 const orderSeed = [
