@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { Navbar, Button } from 'react-bootstrap';
-import './App.css';
+import './AppLogin.css';
 
 class App extends Component {
   goTo(route) {
@@ -22,21 +22,21 @@ class App extends Component {
       <div>
             <button
               bsStyle="primary"
-              className="btn-margin"
+              className="btn btn-margin"
               onClick={this.goTo.bind(this, 'order')}
             >
               Order
             </button>
             <button
               bsStyle="primary"
-              className="btn-margin"
+              className="btn btn-margin"
               onClick={this.goTo.bind(this, 'home')}
             >
               Home
             </button>
             <button
               bsStyle="primary"
-              className="btn-margin"
+              className="btn btn-margin"
               onClick={this.goTo.bind(this, 'manager')}
             >
               Manager
@@ -46,7 +46,7 @@ class App extends Component {
                   <button
                     id="qsLoginBtn"
                     bsStyle="primary"
-                    className="btn-margin"
+                    className="btn btn-margin"
                     onClick={this.login.bind(this)}
                   >
                     Log In
@@ -58,7 +58,7 @@ class App extends Component {
                   <button
                     id="qsLogoutBtn"
                     bsStyle="primary"
-                    className="btn-margin"
+                    className="btn btn-margin"
                     onClick={this.logout.bind(this)}
                   >
                     Log Out
