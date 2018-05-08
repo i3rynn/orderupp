@@ -7,10 +7,11 @@ div.left.foodcontainer {
 
 .food-description {
 	float: right;
-	width: 20rem;
+	width: 15rem;
 }
 
 .card {
 	float:right;
+	width: 25rem;
 }
 

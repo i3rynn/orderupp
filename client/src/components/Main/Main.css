@@ -2,12 +2,27 @@
 	margin: 5px;
 }
 
-.logo {
-	width:171px;
-	height:182px;
-	margin: 5px;
-}
-
 .mt-4, .my-4 {
     margin-left: 10px;
 }
+
+.button-menu {
+	margin-left: 0px;
+	float: right;
+}
+
+img {
+	width: 18em;
+	float:left;
+}
+
+.food-thumbnails {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    float:right;
+}
+
+.menuSelection.mb-4 {
+	float: right;
+}
+
