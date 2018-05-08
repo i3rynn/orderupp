@@ -76,10 +76,13 @@ class Main extends Component {
 
   // submit order
   submitOrder = () => {
-    if(!this.state.orderItems){ return }
-      const items = this.state.orderItems.map( item => {
-        return {name: item.name, price: item.price, image: item.image}
-      });
+    if(this.state.orderItems.length < 1){ 
+      return ;
+    }
+    
+    const items = this.state.orderItems.map( item => {
+      return {name: item.name, price: item.price, image: item.image}
+    });
     console.log(items);
 
     API.saveOrder({items, forWho: 10})
@@ -121,7 +124,7 @@ class Main extends Component {
         Total: {total}
       </div>
       <div className="mt-4">
-        <button onClick={this.submitOrder}>Submit Order</button>
+        <button className="btn btn-primary" onClick={this.submitOrder}>Submit Order</button>
       </div>
       </div>
       {
