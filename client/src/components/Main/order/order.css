@@ -5,7 +5,20 @@
 
 .right.order-wrapper {
 	background-color: #ee4036;
-	width: 50%;
+	width: 40%;
 	height: 30%;
 	margin-right: 10px;
+	padding: 35px;
+	text-align: center;
 }
+
+.order-img-thumbnail {
+	border-radius: 50%;
+	width: 100px;
+	margin: 10px;
+}
+
+h4 {
+	text-align: center;
+}
+
