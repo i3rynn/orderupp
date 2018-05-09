@@ -9,7 +9,8 @@ const orderSchema = new Schema({
 		quantity: Number,
 		image: String
 	}],
-	date: { type: Date, default: Date.now }
+	date: { type: Date, default: Date.now },
+	isComplete: Boolean
 });
 
 const Order = mongoose.model("Order", orderSchema);
