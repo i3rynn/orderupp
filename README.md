@@ -8,6 +8,17 @@
 Order Up is a native application that allows for restaurants to streamline the ordering experience for their customers and staff.
 Managers can edit the menu through administrative rights. Customers/servers can swipe through menu options and add/edit food options to an order. Users can check price and item descriptions. The food items (menu assets) can be changed dynamicalls through a connected database. 
 
+## Setup
+
+```
+yarn install
+cd client
+yarn install
+yarn build
+cd ..
+yarn start
+```
+
 ## Author & Contributor List
 ### David Lester
 - Authentication
