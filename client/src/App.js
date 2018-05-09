@@ -6,8 +6,8 @@
 // const App = () => (
 //   <Router>
 //       <Switch>
-// 		<Route path="/order" component={Main} />
-// 		<Redirect from="/" to="/order" />
+//    <Route path="/order" component={Main} />
+//    <Redirect from="/" to="/order" />
 //         <Route component={NotFound} />
 //       </Switch>
 //   </Router>
@@ -40,7 +40,7 @@ export const makeMainRoutes = () => {
   return (
       <Router history={history}>
         <div>
-          <Route exact path="/" render={(props) => <AppLogin auth={auth} {...props} />} />
+          <Route path="/" render={(props) => <AppLogin auth={auth} {...props} />} />
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
           <Route path="/manager" render={(props) => <Manager auth={auth} {...props} />} />
           <Route path="/order" component={Main} />
