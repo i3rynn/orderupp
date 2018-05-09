@@ -36,7 +36,7 @@ class Main extends Component {
       _id: +new Date(),
       category: "",
       name: "Select an item from above...",
-      image: "http://via.placeholder.com/285x285",
+      image: "Order-Up-w-text.png",
       price: 0,
       desc: ""
     }

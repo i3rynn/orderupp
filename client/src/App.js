@@ -17,7 +17,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Redirect } from 'react-router-dom';
 import AppLogin from './AppLogin';
 import Main from "./components/Main";
 import Manager from "./components/Manager";
@@ -41,6 +41,7 @@ export const makeMainRoutes = () => {
       <Router history={history}>
         <div>
           <Route path="/" render={(props) => <AppLogin auth={auth} {...props} />} />
+          <Redirect from="/" to="/order" />
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
           <Route path="/manager" render={(props) => <Manager auth={auth} {...props} />} />
           <Route path="/order" component={Main} />
