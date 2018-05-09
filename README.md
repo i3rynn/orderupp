@@ -108,6 +108,9 @@ yarn start
 ### Auth0
 <img src="http://openid.net/wordpress-content/uploads/2016/05/auth0-logo-blue.png" width="350" height="150">
 
+### Slick
+<img src="http://kenwheeler.github.io/slick/img/slick.gif" width="350" height="150">
+
 ## Future Plans for Development
 This application meets all set requirements as dictated above. If we were to work further on this application there would be numerous things that could be done to finish the application:
 - The UI would require a dynamic styling that can easily meet the preferences for any potential restaurant
