@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/LYNBtdW.png" width="350" height="250">
+<img src="https://i.imgur.com/LYNBtdW.png" width="400" height="250">
 
 # Group Project 3 at Georgia Tech Coding Bootcamp, Spring of 2018
 
@@ -7,6 +7,7 @@
 ## Heroku
 + https://restaurant-thing-project-thing.herokuapp.com/
 + https://restaurant-thing-project-thing.herokuapp.com/api/menu
++ https://restaurant-thing-project-thing.herokuapp.com/api/order
 
 ## Project Description
 
@@ -86,7 +87,27 @@ yarn start
 - Readme Editing
 - Presentation
 
+## Technologies Used:
+
+### ReactJS
+<img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/react-dev-tools-logo.jpg" width="350" height="150">
+
+### Node Express Web Server
+<img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" width="350" height="150">
+
+### MongoDB
+<img src="https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg" width="350" height="150">
+
+### Mongoose ORM
+
+### Github
+
+### Heroku
+<img src="https://logos-download.com/wp-content/uploads/2016/09/Heroku_logo.png" width="350" height="150">
+
+### Auth0
 
 
 
-+ https://restaurant-thing-project-thing.herokuapp.com/api/order
+
+
