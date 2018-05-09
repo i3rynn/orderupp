@@ -5,7 +5,7 @@
 ## Project Source can be downloaded from https://github.com/yangcs907/group_project_3
 
 ## Author & Contributor List
-David Lester
+### David Lester
 - Authorization
 - CSS & Styling
 - Backend
@@ -19,7 +19,7 @@ Jermaine Foster
 - Slider Functionality
 - Planning
 
-Katherine
+Katherine Reosenkranz
 - Database
 - Backend
 - JS
