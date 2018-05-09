@@ -13,13 +13,13 @@
 - Idea Formation
 - React
 
-Jermaine Foster
+### Jermaine Foster
 - Wireframe
 - CSS & Styling
 - Slider Functionality
 - Planning
 
-Katherine Reosenkranz
+### Katherine Reosenkranz
 - Database
 - Backend
 - JS
@@ -27,23 +27,23 @@ Katherine Reosenkranz
 - Debugging
 - Presentation 
 
-Chris Yang
+### Chris Yang
 - Backend
 - JS
 - Debugging
 - React
 
-Amelia Outland
+### Amelia Outland
 - Database
 - Asset Editing
 - Planning 
 
-Marsalis Sanders
+### Marsalis Sanders
 - Slider Functionality
 - Planning
 - CSS
 
-Thomas Gentle
+### Thomas Gentle
 - Wireframe Assistance
 - Planning
 - Asset Formation
