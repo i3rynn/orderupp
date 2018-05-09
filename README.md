@@ -99,14 +99,13 @@ yarn start
 <img src="https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg" width="350" height="150">
 
 ### Mongoose ORM
-
-### Github
+<img src="http://mongodb-tools.com/img/mongoose.png" width="350" height="150">
 
 ### Heroku
 <img src="https://logos-download.com/wp-content/uploads/2016/09/Heroku_logo.png" width="350" height="150">
 
 ### Auth0
-
+<img src="http://openid.net/wordpress-content/uploads/2016/05/auth0-logo-blue.png" width="350" height="150">
 
 
 
