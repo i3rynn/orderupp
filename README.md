@@ -1,6 +1,7 @@
 <im src="" width="250" height="250">
 
 # Group Project 3 at Georgia Tech Coding Bootcamp, Spring of 2018
+
 ## Project Source can be downloaded from https://github.com/yangcs907/group_project_3
 
 ## Author & Contributor List
