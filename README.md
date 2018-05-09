@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/LYNBtdW.png" width="250" height="250">
+<img src="https://i.imgur.com/LYNBtdW.png" width="350" height="250">
 
 # Group Project 3 at Georgia Tech Coding Bootcamp, Spring of 2018
 
