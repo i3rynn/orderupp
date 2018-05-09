@@ -1,6 +1,7 @@
 <img src="https://i.imgur.com/LYNBtdW.png" width="400" height="250">
 
-# Group Project 3 at Georgia Tech Coding Bootcamp, Spring of 2018
+# Group Project 3 at Georgia Tech Coding Bootcamp - 
+# Spring of 2018
 
 ## Project Source can be downloaded from https://github.com/yangcs907/group_project_3
 
