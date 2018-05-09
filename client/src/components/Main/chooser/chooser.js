@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./chooser.css";
+// import Flickity from 'react-flickity-component';
+import Slider from "react-slick";
 
 class Chooser extends Component {
   state = {
@@ -42,24 +44,22 @@ class Chooser extends Component {
 
   // ==============================================================
   // Render function
-
   render() {
-      const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }; 
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 6,
+      slidesToScroll: 1
+    };
 
+    // console.log(this.props.menuOptions);
     return (
       <React.Fragment>
-        <div className="button-menu" style={{float: 'right', margin: 10, marginLeft: '50%'}}>
-          {this.state.categories.map(this.renderCategoryButton)}
-        </div>
-        <div className="food-thumbnails" style={{float: 'right', marginLeft: '40%'}}>
-          {this.props.menuOptions.length > 0 ? this.shownCategory() : null}
-        </div>
+      {this.state.categories.map(category => this.renderCategoryButton(category))}
+      <Slider {...settings}>
+        {this.shownCategory()}
+      </Slider>
       </React.Fragment>
     );
   }

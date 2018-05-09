@@ -12,6 +12,9 @@ div.left.foodcontainer {
 
 .card {
 	float:right;
-	width: 25rem;
+	width: 20rem;
 }
 
+p {
+	font-size: 12px;
+}
