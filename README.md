@@ -4,6 +4,10 @@
 
 ## Project Source can be downloaded from https://github.com/yangcs907/group_project_3
 
+## Heroku
++ https://restaurant-thing-project-thing.herokuapp.com/
++ https://restaurant-thing-project-thing.herokuapp.com/api/menu
+
 ## Project Description
 
 - Must use ReactJS or Angular in some way (even if minimal)
@@ -31,6 +35,10 @@ yarn build
 cd ..
 yarn start
 ```
+## Local Settings
++ <http://localhost:3000>
++ <http://localhost:3001/api/menu>
++ <http://localhost:3001/api/order>
 
 ## Author & Contributor List
 ### David Lester
@@ -79,26 +87,6 @@ yarn start
 - Presentation
 
 
-## Setup
 
 
-```
-yarn install
-cd client
-yarn install
-yarn build
-cd ..
-
-
-yarn start
-```
-
-## Locally
-+ <http://localhost:3000>
-+ <http://localhost:3001/api/menu>
-+ <http://localhost:3001/api/order>
-
-## Heroku
-+ https://restaurant-thing-project-thing.herokuapp.com/
-+ https://restaurant-thing-project-thing.herokuapp.com/api/menu
 + https://restaurant-thing-project-thing.herokuapp.com/api/order
