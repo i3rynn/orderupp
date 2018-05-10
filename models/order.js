@@ -10,7 +10,7 @@ const orderSchema = new Schema({
 		image: String
 	}],
 	date: { type: Date, default: Date.now },
-	isComplete: Boolean
+	complete: Boolean
 });
 
 const Order = mongoose.model("Order", orderSchema);
