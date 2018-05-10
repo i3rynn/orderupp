@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Tabs, Tab} from 'react-bootstrap-tabs';
 import API from "../../utils/API";
 import AddItem from "./AddItem/AddItem";
-import MenuItem from "./MenuItem/MenuItem";
+import MenuItem from "./MenuItem/menuitem";
 import OrderItem from "./OrderItem/OrderItem";
 
 class Manager extends Component {
