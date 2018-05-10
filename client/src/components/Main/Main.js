@@ -105,6 +105,7 @@ class Main extends Component {
     const total = Math.round(this.state.orderItems.reduce((t, i) => t + i.price, 0) * 100) / 100;
     return (
       <React.Fragment>
+      <img src="Order-Up-w-text.png" alt="Order Up logo" />
       <div className="menuSelection mb-4">
       <Chooser menuOptions={this.state.menuOptions} setCurrent={this.setCurrent} />
       </div>
