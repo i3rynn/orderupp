@@ -10,7 +10,7 @@ export default {
     return axios.get("/api/order/" + id);
   },
   // Gets the order with the given id
-  approveOrderById: function(id, orderData) {
+  updateOrder: function(id, orderData) {
     return axios.put("/api/order/" + id, orderData);
   },
   // Deletes the order with the given id

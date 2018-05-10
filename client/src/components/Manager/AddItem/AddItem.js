@@ -38,58 +38,83 @@ class AddItem extends Component {
 
   render() {
     return (
-      <div>
-      <h1>Add an item to the menu</h1>
+      <div className="px-5">
+      <h1 className="mt-4 mb-4">Add an item to the menu</h1>
 
       <form className="form">
 
+      <div class="form-group">
       <legend>Select a Category</legend>
+      <label className="mr-4">
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Specials" /> Specials 
+      </label>
+      <label className="mr-4">
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Kids" /> Kids 
+      </label>
+      <label className="mr-4">
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Entrees" /> Entrees 
+      </label>
+      <label className="mr-4">
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Desserts" /> Desserts 
+      </label>
+      <label className="mr-4">
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Drinks" /> Drinks 
+      </label>
+      </div>
 
-      <label>Specials
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Specials" />
-      </label>
-      <label>Kids
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Kids" />
-      </label>
-      <label>Entrees
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Entrees" />
-      </label>
-      <label>Desserts
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Desserts" />
-      </label>
-      <label>Drinks
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Drinks" />
-      </label>
+      <div class="form-group">
+      <label>Item Name:</label>
       <input
+      className="form-control"
       value={this.state.name}
       name="name"
       onChange={this.handleInputChange}
       type="text"
       placeholder="Item Name"
       />
+      </div>
+
+      <div class="form-group">
+      <label for="price">Item Price:</label>
       <input
+      className="form-control"
       value={this.state.price}
       name="price"
+      id="price"
       onChange={this.handleInputChange}
       type="number"
       step="0.01"
+      min="0"
       placeholder="Item Price"
       />
+      </div>
+
+      <div class="form-group">
+      <label for="desc">Item Description:</label>
       <input
+      className="form-control"
       value={this.state.desc}
       name="desc"
+      id="desc"
       onChange={this.handleInputChange}
       type="text"
       placeholder="Description"
       />
+      </div>
+
+      <div class="form-group">
+      <label for="image">Item Image:</label>
       <input
+      className="form-control"
       value={this.state.image}
       name="image"
+      desc="image"
       onChange={this.handleInputChange}
       type="text"
       placeholder="Image"
       />
-      <button onClick={this.handleFormSubmit}>Submit</button>
+      </div>
+      <button className="btn btn-primary" onClick={this.handleFormSubmit}>Submit</button>
       </form>
       </div>
       );

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Tabs, Tab} from 'react-bootstrap-tabs';
 import API from "../../utils/API";
 import AddItem from "./AddItem/AddItem";
 import MenuItem from "./MenuItem/MenuItem";
@@ -52,9 +53,9 @@ class Manager extends Component {
     // Handle completing orders 
 
     handleChangeCompleted = (orderId, isComplete) => {
-        API.UpdateOrder(orderId, {complete: isComplete})
+        API.updateOrder(orderId, {complete: isComplete})
             .then(data => {
-                const updatedOrders = this.state.map( order =>{
+                const updatedOrders = this.state.orders.map( order =>{
                     if(order._id === orderId){
                         order.complete = isComplete;
                     }
@@ -85,45 +86,31 @@ class Manager extends Component {
                 {
                     isAuthenticated() && (
                         <React.Fragment>
-                            <h1 className="display-1">Manage</h1>
-                            <div className="container">
-                            <div class="card text-center">
-                              <div class="card-header">
-                                <ul class="nav nav-tabs card-header-tabs" role="tablist">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" id="open-tab" data-toggle="tab" href="#open" role="tab" aria-controls="open" aria-selected="true">Open Orders</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="past-tab" data-toggle="tab" href="#past" role="tab" aria-controls="past" aria-selected="false">Past Orders</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="menu-tab" data-toggle="tab" href="#menu" role="tab" aria-controls="menu" aria-selected="false">Manage Menu</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="add-tab" data-toggle="tab" href="#add" role="tab" aria-controls="add" aria-selected="false">Add To Menu</a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="card-body tab-content" id="myTabContent">
-                                  <div class="tab-pane fade show active" id="open" role="tabpanel" aria-labelledby="open-tab">
-                                  <ul class="list-group">
-                                  {this.state.orders.map(renderOrder)}
+                            <h1 className="sr-only">Manage</h1>
+                            <div className="container mt-5 mb-5">
+                            <div className="card w-100">
+                              <div className="card-body">
+                              <Tabs>
+                                  <Tab label="Open Orders">
+                                  <ul className="list-group">
+                                  {this.state.orders.filter(order => !order.complete ).map(renderOrder)}
                                   </ul>
-                                  </div>
-                                  <div class="tab-pane fade" id="past" role="tabpanel" aria-labelledby="past-tab">
-                                  <ul class="list-group">
-                                  {this.state.orders.map(renderOrder)}
+                                  </Tab>
+                                  <Tab label="Past Orders">
+                                  <ul className="list-group">
+                                  {this.state.orders.filter(order => order.complete ).map(renderOrder)}
                                   </ul>
-                                  </div>
-                                  <div class="tab-pane fade" id="menu" role="tabpanel" aria-labelledby="menu-tab">
-                                  <ul class="list-group">
+                                  </Tab>
+                                  <Tab label="Manage Menu">
+                                  <ul className="list-group">
                                   {this.state.menuOptions.map(renderMenuItem)}
                                   </ul>
-                                  </div>
-                                  <div class="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">
+                                  </Tab>
+                                  <Tab label="Add To Menu">
                                   <AddItem add={this.handleAdd} />
-                                  </div>
-                                </div>
+                                  </Tab>
+                                </Tabs>
+                            </div>
                             </div>
                             </div>
                         </React.Fragment>
