@@ -30,9 +30,9 @@ class App extends Component {
             <button
               bsStyle="primary"
               className="btn btn-margin"
-              onClick={this.goTo.bind(this, 'home')}
+              onClick={this.goTo.bind(this, 'about')}
             >
-              Home
+              About Us
             </button>
             <button
               bsStyle="primary"

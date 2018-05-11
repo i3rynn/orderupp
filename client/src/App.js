@@ -22,7 +22,7 @@ import AppLogin from './AppLogin';
 import Main from "./components/Main";
 import Manager from "./components/Manager";
 import NotFound from "./components/NotFound";
-import Home from './Home/Home';
+import About from './components/About';
 //import Order from './Order/Order';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
@@ -41,10 +41,10 @@ export const makeMainRoutes = () => {
       <Router history={history}>
         <div>
           <Route path="/" render={(props) => <AppLogin auth={auth} {...props} />} />
-          <Redirect from="/" to="/order" />
-          <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
+          <Route path="/about" component={About} />
           <Route path="/manager" render={(props) => <Manager auth={auth} {...props} />} />
           <Route path="/order" component={Main} />
+          <Redirect from="/" to="/about" />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback {...props} /> 
