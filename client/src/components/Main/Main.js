@@ -21,8 +21,13 @@ class Main extends Component {
     // get all menu items
     API.getMenu()
       .then(data => this.setState({ menuOptions: data.data }))
-      .then(() => this.setCurrent( this.state.menuOptions[0]._id ))
-    // this.setDefaultCurrent();
+      .then(() => {
+        if(this.state.menuOptions[0]){
+          return this.setCurrent( this.state.menuOptions[0]._id );
+        } else {
+          return this.setDefaultCurrent();
+        }
+      })
   }
 
   // ==============================================================
