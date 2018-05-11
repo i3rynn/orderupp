@@ -23,7 +23,7 @@ class App extends Component {
 
         <div className="column">
           <div className="cardAbout">
-            <img src="Headshots/Amelia.jpg" alt="Amelia" class="imgAbout" />
+            <img src="Headshots/amelia.jpg" alt="Amelia" class="imgAbout" />
             <div className="container">
               <h2 id="nameTag">Amelia Outland</h2>
               <h3 className="title">Sous Chef</h3>
