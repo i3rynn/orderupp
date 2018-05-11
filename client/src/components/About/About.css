@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .aboutHeader {
   text-align: center;
   font-family: Avenir;
@@ -17,6 +18,16 @@
     background-color: rgba(211, 211, 211, 0.1);
     border-radius: 8px;
 }
+=======
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 23%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+>>>>>>> 50acbb40b2c76b4a7bdbf8d998f2d850aa438caf
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
     .column {
@@ -26,6 +37,12 @@
 }
 
 /* Add some shadows to create a card effect */
+<<<<<<< HEAD
+=======
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+>>>>>>> 50acbb40b2c76b4a7bdbf8d998f2d850aa438caf
 
 /* Some left and right padding inside the container */
 .container {
@@ -40,10 +57,14 @@
 }
 
 .title {
+<<<<<<< HEAD
     color: #DCDCDC;
     text-align: center;
     font-family: Avenir;
     font-size: 20px;
+=======
+    color: grey;
+>>>>>>> 50acbb40b2c76b4a7bdbf8d998f2d850aa438caf
 }
 
 .button {
@@ -62,6 +83,7 @@
     background-color: #555;
 }
 
+<<<<<<< HEAD
 .imgAbout {
   display: block;
   margin-left: auto;
@@ -100,3 +122,21 @@
 .container {
   margin-top: 10px;
 }
+=======
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*.picture {
+    width:25%;
+}*/
+
+.column {
+    margin: 3% 3% 3% 5%;
+}
+
+p {
+    font-size: 12px;
+}
+>>>>>>> 50acbb40b2c76b4a7bdbf8d998f2d850aa438caf
