@@ -4,13 +4,14 @@ import API from "../../utils/API";
 import AddItem from "./AddItem/AddItem";
 import MenuItem from "./MenuItem/menuitem";
 import OrderItem from "./OrderItem/OrderItem";
+import "./Manager.css";
 
 class Manager extends Component {
     login() {
         this.props.auth.login();
     }
     state = {
-        menuOptions: [], 
+        menuOptions: [],
         orders: []
     };
 
@@ -30,7 +31,7 @@ class Manager extends Component {
     }
 
     // ==============================================================
-    // Handle adding and deleting of menu items 
+    // Handle adding and deleting of menu items
 
     handleAdd = newMenuItem => {
         API.saveMenu(newMenuItem)
@@ -50,7 +51,7 @@ class Manager extends Component {
     }
 
     // ==============================================================
-    // Handle completing orders 
+    // Handle completing orders
 
     handleChangeCompleted = (orderId, isComplete) => {
         API.updateOrder(orderId, {complete: isComplete})
@@ -66,17 +67,17 @@ class Manager extends Component {
     }
 
     // ==============================================================
-    // Render function 
+    // Render function
     render() {
         const { isAuthenticated } = this.props.auth;
         const renderMenuItem = item => (
-            <MenuItem 
-            key={item._id || +new Date()} 
-            {...item} 
+            <MenuItem
+            key={item._id || +new Date()}
+            {...item}
             delete={this.handleDelete}
              />);
         const renderOrder = order => (
-            <OrderItem 
+            <OrderItem
             key={order._id}
             {...order}
             changeComplete={this.handleChangeCompleted}
@@ -91,22 +92,22 @@ class Manager extends Component {
                             <div className="card w-100">
                               <div className="card-body">
                               <Tabs>
-                                  <Tab label="Open Orders">
+                                  <Tab class ="tabs" label="Open Orders">
                                   <ul className="list-group">
                                   {this.state.orders.filter(order => !order.complete ).map(renderOrder)}
                                   </ul>
                                   </Tab>
-                                  <Tab label="Past Orders">
+                                  <Tab class="tabs" label="Past Orders">
                                   <ul className="list-group">
                                   {this.state.orders.filter(order => order.complete ).map(renderOrder)}
                                   </ul>
                                   </Tab>
-                                  <Tab label="Manage Menu">
+                                  <Tab class="tabs" label="Manage Menu">
                                   <ul className="list-group">
                                   {this.state.menuOptions.map(renderMenuItem)}
                                   </ul>
                                   </Tab>
-                                  <Tab label="Add To Menu">
+                                  <Tab class="tabs" label="Add To Menu">
                                   <AddItem add={this.handleAdd} />
                                   </Tab>
                                 </Tabs>

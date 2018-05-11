@@ -4,15 +4,21 @@
 }
 
 .right.order-wrapper {
-	background-color: #ee4036;
+	background-color: rgba(211, 211, 211, 0.1);
 	width: 45%;
 	height: 30%;
-	margin-right: 10px;
+	margin-right: 100px;
+	margin-top: 10px;
 	padding: 10px;
 	padding-left: 3%;
 	border-radius: 5px;
 }
 
+h5 {
+	color: #DCDCDC;
+	font-family: Avenir;
+	font-size: 18px;
+}
 .order-img-thumbnail {
 	border-radius: 50%;
 	width: 100px;
@@ -29,4 +35,3 @@ img {
 	    border-width:3;
 	border-color:#ffe8d5;
 }
-

@@ -13,9 +13,9 @@ class Chooser extends Component {
   // Category Interactions
 
   renderCategoryButton = category => (
-    <button 
+    <button
     className="btn btn-primary"
-    onClick={() => this.switchCategory(category)} 
+    onClick={() => this.switchCategory(category)}
     key={category}
     >
     {category}
@@ -27,8 +27,8 @@ class Chooser extends Component {
       .filter(item => item.category === this.state.shownCategory)
       .map(item => (
         <div className="thumbnail-wrapper" key={item._id}>
-        <img 
-        src={item.image} 
+        <img
+        src={item.image}
         onClick={() => this.props.setCurrent(item._id)}
         alt={item.name} />
         </div>

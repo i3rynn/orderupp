@@ -46,19 +46,19 @@ class AddItem extends Component {
       <div class="form-group">
       <legend>Select a Category</legend>
       <label className="mr-4">
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Specials" /> Specials 
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Specials" /> Specials
       </label>
       <label className="mr-4">
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Kids" /> Kids 
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Kids" /> Kids
       </label>
       <label className="mr-4">
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Entrees" /> Entrees 
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Entrees" /> Entrees
       </label>
       <label className="mr-4">
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Desserts" /> Desserts 
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Desserts" /> Desserts
       </label>
       <label className="mr-4">
-      <input name="category" onChange={this.handleInputChange} type="radio" value="Drinks" /> Drinks 
+      <input name="category" onChange={this.handleInputChange} type="radio" value="Drinks" /> Drinks
       </label>
       </div>
 

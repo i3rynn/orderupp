@@ -31,7 +31,7 @@ class Main extends Component {
   }
 
   // ==============================================================
-  // Handle showing current item showing 
+  // Handle showing current item showing
 
   // set currentSelection to placeholder values
   setDefaultCurrent = () => {
@@ -53,7 +53,7 @@ class Main extends Component {
   }
 
   // ==============================================================
-  // Handle adding and removing an item from the order 
+  // Handle adding and removing an item from the order
 
   // add item to order
   addCurrentToOrder = () => {
@@ -75,14 +75,14 @@ class Main extends Component {
 
 
   // ==============================================================
-  // Handle submitting an order and reseting to hide nice 
+  // Handle submitting an order and reseting to hide nice
 
   // submit order
   submitOrder = () => {
-    if(this.state.orderItems.length < 1){ 
+    if(this.state.orderItems.length < 1){
       return ;
     }
-    
+
     const items = this.state.orderItems.map( item => {
       return {name: item.name, price: item.price, image: item.image}
     });
@@ -105,7 +105,7 @@ class Main extends Component {
   }
 
   // ==============================================================
-  // Render function 
+  // Render function
   render() {
     const total = Math.round(this.state.orderItems.reduce((t, i) => t + i.price, 0) * 100) / 100;
     return (
@@ -115,19 +115,19 @@ class Main extends Component {
       <Chooser menuOptions={this.state.menuOptions} setCurrent={this.setCurrent} />
       </div>
       <div className="orderArea w-100 d-flex justify-content-between">
-      
-      {this.state.currentSelection ? 
-      <Foodcontainer {...this.state.currentSelection} addToOrder={this.addCurrentToOrder} /> : 
+
+      {this.state.currentSelection ?
+      <Foodcontainer {...this.state.currentSelection} addToOrder={this.addCurrentToOrder} /> :
       null }
-    
+
       <Order orderItems={this.state.orderItems} removeOrder={this.removeFromOrder} />
       </div>
       <div className="totalArea d-flex justify-content-between">
-      <div className="mt-4 display-4">
+      <div className="total">
         Total: {total}
       </div>
       <div className="mt-4">
-        <button className="btn btn-primary" onClick={this.submitOrder}>Submit Order</button>
+        <button className="btn btn-primarySubmit" onClick={this.submitOrder}>Submit Order</button>
       </div>
       </div>
       {

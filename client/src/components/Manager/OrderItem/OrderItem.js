@@ -21,7 +21,7 @@ class OrderItem extends Component {
 			</div>
 			<div className="d-flex">
 			<ul>
-			{this.props.items.map(item => <li key={createKey()}>{item.name} | ${item.price}</li>)} 
+			{this.props.items.map(item => <li key={createKey()}>{item.name} | ${item.price}</li>)}
 			</ul>
 			</div>
 			</li>
