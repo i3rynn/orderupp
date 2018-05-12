@@ -27,6 +27,16 @@
 Order Up is a native application that allows for restaurants to streamline the ordering experience for their customers and staff.
 Managers can edit the menu through administrative rights. Customers/servers can swipe through menu options and add/edit food options to an order. Users can check price and item descriptions. The food items (menu assets) can be changed dynamicalls through a connected database. 
 
+## ScreenShots
+This is the primary screen where customers and servers are able to see the existing menu options and place an order.
+<img src="https://i.imgur.com/f1jaRj0.jpg" width="750" height="450">
+ 
+This is the manager's view screen where the database can be changed to edit menu item options.
+<img src="https://i.imgur.com/9C6dxSS.jpg" width="750" height="450">
+
+Once an order has been placed and sent to the kitchen, the app will return this message.
+<img src="https://i.imgur.com/MpDDRgd.jpg" width="750" height="450">
+
 ## Setup
 
 ```
