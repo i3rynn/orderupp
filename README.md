@@ -125,5 +125,6 @@ yarn start
 This application meets all set requirements as dictated above. If we were to work further on this application there would be numerous things that could be done to finish the application:
 - The UI would require a dynamic styling that can easily meet the preferences for any potential restaurant
 - The addition of completed pages with differing functionality depending on the user type
+- More customizable options for different user types and menu additions (such as customizing particular orders)
 
 
